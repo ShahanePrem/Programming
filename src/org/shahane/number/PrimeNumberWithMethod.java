@@ -2,22 +2,18 @@ package org.shahane.number;
 
 import java.util.Scanner;
 
-public class PrimeNumberWithoutMethod {
+public class PrimeNumberWithMethod {
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Entre The Number");
 		int number=scanner.nextInt();
-		System.out.println(isPrime(number));
-		scanner.close();
-	}
-	public static String isPrime(int number) {
 		int count=0;
 		for (int i = 1; i < number; i++) {
 			if (number%i==0) {
 				count++;
 			}
 		}
-		return (count==2?number+" Is A Prime Number":number+" Is Not A Prime Number");
-		
+		System.out.println(count==2?number+" Is A Prime Number":number+" Is Not A Prime Number");
+		scanner.close();
 	}
 }
